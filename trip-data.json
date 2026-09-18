@@ -1,0 +1,932 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": false,
+      "driving": false,
+      "ledger": false
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "2026-dongbei-autumn",
+    "title": "东北秋游 · 2026",
+    "language": "zh-CN",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-03-coastal.webp"
+      ]
+    }
+  },
+  "trip": {
+    "status": "draft",
+    "startDate": "2026-10-01",
+    "endDate": "2026-10-08",
+    "dayCount": 8,
+    "nightCountAway": 7,
+    "countries": [
+      {
+        "code": "CN",
+        "name": "中国",
+        "nameZh": "中国",
+        "nameEn": "China"
+      }
+    ],
+    "primaryDestinationCountries": [
+      "CN"
+    ],
+    "citiesAndAreas": [
+      "本溪",
+      "齐齐哈尔",
+      "伊春",
+      "哈尔滨"
+    ],
+    "routeSummary": "香港往返 · 东北秋游",
+    "groupSize": null,
+    "primaryDestinationName": "东北",
+    "primaryDestinationNameEn": "NORTHEAST CHINA"
+  },
+  "flightJourneys": [
+    {
+      "id": "journey-outbound",
+      "title": "香港 → 沈阳",
+      "status": "confirmed"
+    },
+    {
+      "id": "journey-return",
+      "title": "哈尔滨 → 香港",
+      "status": "confirmed"
+    }
+  ],
+  "flights": [
+    {
+      "id": "flight-cz356",
+      "journeyId": "journey-outbound",
+      "sequence": 1,
+      "airline": {
+        "name": "China Southern",
+        "nameZh": "中国南方航空"
+      },
+      "flightNumber": "CZ356",
+      "departure": {
+        "airportCode": "HKG",
+        "city": "香港",
+        "date": "2026-10-01",
+        "time": "13:40",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "PKX",
+        "city": "北京",
+        "date": "2026-10-01",
+        "time": "16:55",
+        "utcOffset": "+08:00"
+      }
+    },
+    {
+      "id": "flight-cz6102",
+      "journeyId": "journey-outbound",
+      "sequence": 2,
+      "airline": {
+        "name": "China Southern",
+        "nameZh": "中国南方航空"
+      },
+      "flightNumber": "CZ6102",
+      "departure": {
+        "airportCode": "PKX",
+        "city": "北京",
+        "date": "2026-10-01",
+        "time": "21:20",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "SHE",
+        "city": "沈阳",
+        "date": "2026-10-01",
+        "time": "23:05",
+        "utcOffset": "+08:00"
+      }
+    },
+    {
+      "id": "flight-cz6207",
+      "journeyId": "journey-return",
+      "sequence": 1,
+      "airline": {
+        "name": "China Southern",
+        "nameZh": "中国南方航空"
+      },
+      "flightNumber": "CZ6207",
+      "departure": {
+        "airportCode": "HRB",
+        "city": "哈尔滨",
+        "date": "2026-10-08",
+        "time": "10:30",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "PKX",
+        "city": "北京",
+        "date": "2026-10-08",
+        "time": "12:55",
+        "utcOffset": "+08:00"
+      }
+    },
+    {
+      "id": "flight-cz5009",
+      "journeyId": "journey-return",
+      "sequence": 2,
+      "airline": {
+        "name": "China Southern",
+        "nameZh": "中国南方航空"
+      },
+      "flightNumber": "CZ5009",
+      "departure": {
+        "airportCode": "PKX",
+        "city": "北京",
+        "date": "2026-10-08",
+        "time": "19:00",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "HKG",
+        "city": "香港",
+        "date": "2026-10-08",
+        "time": "22:45",
+        "utcOffset": "+08:00"
+      }
+    }
+  ],
+  "accommodations": [],
+  "groundTransport": {
+    "rentalCar": null,
+    "rentalChecklist": [],
+    "drivingNotes": [],
+    "drivingReferenceLinks": [],
+    "plannedRoadLegs": [],
+    "publicTransitAndRail": []
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-10-01",
+      "title": "启程 · 抵达本溪",
+      "locations": [
+        "香港",
+        "北京",
+        "沈阳",
+        "本溪"
+      ],
+      "schedule": [
+        {
+          "id": "item-d1-01",
+          "time": "13:40",
+          "type": "flight",
+          "text": "CZ356 香港 → 北京大兴 13:40–16:55"
+        },
+        {
+          "id": "item-d1-02",
+          "time": "21:20",
+          "type": "flight",
+          "text": "CZ6102 北京大兴 → 沈阳桃仙 21:20–23:05"
+        },
+        {
+          "id": "item-d1-03",
+          "time": "23:05",
+          "type": "transfer",
+          "text": "落地沈阳桃仙，包车前往本溪"
+        },
+        {
+          "id": "item-d1-04",
+          "time": "",
+          "type": "check-in",
+          "text": "入住：本溪县山村美民宿"
+        },
+        {
+          "id": "item-d1-05",
+          "time": "",
+          "type": "note",
+          "text": "去香港机场大巴时间待定；包车师傅需出发前一周最终确认"
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-10-02",
+      "title": "关门山 · 夜赴齐齐哈尔",
+      "locations": [
+        "本溪",
+        "沈阳",
+        "齐齐哈尔"
+      ],
+      "schedule": [
+        {
+          "id": "item-d2-01",
+          "time": "上午",
+          "type": "attraction",
+          "text": "关门山国家森林公园游玩"
+        },
+        {
+          "id": "item-d2-02",
+          "time": "14:51",
+          "type": "transfer",
+          "text": "D7756 本溪 → 沈阳 14:51–15:24"
+        },
+        {
+          "id": "item-d2-03",
+          "time": "21:02",
+          "type": "transfer",
+          "text": "K1229 沈阳 → 齐齐哈尔 21:02–07:01(+1)"
+        },
+        {
+          "id": "item-d2-04",
+          "time": "",
+          "type": "check-in",
+          "text": "夜宿火车卧铺（均下铺）"
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-10-03",
+      "title": "扎龙湿地",
+      "locations": [
+        "齐齐哈尔"
+      ],
+      "schedule": [
+        {
+          "id": "item-d3-01",
+          "time": "07:01",
+          "type": "arrive",
+          "text": "K1229 抵达齐齐哈尔"
+        },
+        {
+          "id": "item-d3-02",
+          "time": "上午",
+          "type": "attraction",
+          "text": "齐齐哈尔早市"
+        },
+        {
+          "id": "item-d3-03",
+          "time": "",
+          "type": "attraction",
+          "text": "扎龙湿地观鹤（打车或公交前往）"
+        },
+        {
+          "id": "item-d3-04",
+          "time": "",
+          "type": "check-in",
+          "text": "入住：全季齐齐哈尔卜奎大街酒店"
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-10-04",
+      "title": "转赴伊春",
+      "locations": [
+        "齐齐哈尔",
+        "哈尔滨",
+        "伊春"
+      ],
+      "schedule": [
+        {
+          "id": "item-d4-01",
+          "time": "",
+          "type": "transfer",
+          "text": "齐齐哈尔 → 哈尔滨 动车（约 1.5 小时，车次待定）"
+        },
+        {
+          "id": "item-d4-02",
+          "time": "",
+          "type": "transfer",
+          "text": "哈尔滨 → 伊春 高铁（未开售，车次待定）"
+        },
+        {
+          "id": "item-d4-03",
+          "time": "",
+          "type": "note",
+          "text": "本日行程机动"
+        },
+        {
+          "id": "item-d4-04",
+          "time": "",
+          "type": "check-in",
+          "text": "入住：红松果客栈升辉市场店"
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-10-05",
+      "title": "伊春林海",
+      "locations": [
+        "伊春"
+      ],
+      "schedule": [
+        {
+          "id": "item-d5-01",
+          "time": "",
+          "type": "attraction",
+          "text": "五营国家森林公园"
+        },
+        {
+          "id": "item-d5-02",
+          "time": "",
+          "type": "attraction",
+          "text": "溪水国家森林公园"
+        },
+        {
+          "id": "item-d5-03",
+          "time": "",
+          "type": "attraction",
+          "text": "汤旺河石林（打车或包车）"
+        },
+        {
+          "id": "item-d5-04",
+          "time": "",
+          "type": "check-in",
+          "text": "入住：红松果客栈升辉市场店"
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-10-06",
+      "title": "午后返哈尔滨",
+      "locations": [
+        "伊春",
+        "哈尔滨"
+      ],
+      "schedule": [
+        {
+          "id": "item-d6-01",
+          "time": "上午",
+          "type": "attraction",
+          "text": "伊春景区（机动）"
+        },
+        {
+          "id": "item-d6-02",
+          "time": "下午/晚上",
+          "type": "transfer",
+          "text": "伊春 → 哈尔滨 高铁（车次待定）"
+        },
+        {
+          "id": "item-d6-03",
+          "time": "",
+          "type": "check-in",
+          "text": "入住：中央大街索菲亚广场亚朵S酒店"
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-10-07",
+      "title": "横道河子 · 东北虎林园",
+      "locations": [
+        "哈尔滨",
+        "横道河子",
+        "哈尔滨"
+      ],
+      "schedule": [
+        {
+          "id": "item-d7-01",
+          "time": "08:04",
+          "type": "transfer",
+          "text": "哈尔滨 → 横道河子 动车 08:04–09:43"
+        },
+        {
+          "id": "item-d7-02",
+          "time": "",
+          "type": "attraction",
+          "text": "横道河子东北虎林园"
+        },
+        {
+          "id": "item-d7-03",
+          "time": "16:42",
+          "type": "transfer",
+          "text": "横道河子 → 哈尔滨 动车 16:42–18:30"
+        },
+        {
+          "id": "item-d7-04",
+          "time": "",
+          "type": "check-in",
+          "text": "入住：中央大街索菲亚广场亚朵S酒店"
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-10-08",
+      "title": "返程 · 回到香港",
+      "locations": [
+        "哈尔滨",
+        "北京",
+        "香港",
+        "深圳"
+      ],
+      "schedule": [
+        {
+          "id": "item-d8-01",
+          "time": "10:30",
+          "type": "flight",
+          "text": "CZ6207 哈尔滨太平 → 北京大兴 10:30–12:55"
+        },
+        {
+          "id": "item-d8-02",
+          "time": "19:00",
+          "type": "flight",
+          "text": "CZ5009 北京大兴 → 香港 19:00–22:45"
+        },
+        {
+          "id": "item-d8-03",
+          "time": "",
+          "type": "transfer",
+          "text": "香港返回深圳大巴"
+        }
+      ]
+    }
+  ],
+  "places": [],
+  "restaurants": [],
+  "bookingsAndTickets": [],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "门票状态默认只保存在当前浏览器。",
+    "items": []
+  },
+  "preTrip": {
+    "packingItems": [],
+    "preparationsExplicitlyMentioned": [],
+    "missingNote": ""
+  },
+  "mapLinks": {
+    "providedGoogleMapsLinks": [],
+    "note": "",
+    "cityLevelNavigationDisabled": false,
+    "navigationPolicy": {
+      "noNavigationTypes": [
+        "flight",
+        "note",
+        "rest"
+      ],
+      "selfNavigationTypes": [
+        "drive",
+        "return",
+        "transfer",
+        "check-in",
+        "check-out",
+        "restaurant",
+        "attraction",
+        "walk",
+        "hike"
+      ]
+    },
+    "navigationPlaces": []
+  },
+  "issuesAndUncertainties": [],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "region": {
+      "id": "northeast",
+      "label": "东北秋游",
+      "countryCode": "CN",
+      "heading": "东北秋游 · NORTHEAST CHINA",
+      "title": "东北秋游路线",
+      "description": "本溪 → 齐齐哈尔 → 伊春 → 哈尔滨 行程示意图"
+    },
+    "places": [
+      {
+        "id": "benxi",
+        "name": "本溪",
+        "countryCode": "CN",
+        "geo": {
+          "lat": 41.294,
+          "lng": 124.123
+        },
+        "query": "本溪关门山国家森林公园"
+      },
+      {
+        "id": "qiqihar",
+        "name": "齐齐哈尔",
+        "countryCode": "CN",
+        "geo": {
+          "lat": 47.354,
+          "lng": 123.918
+        },
+        "query": "齐齐哈尔扎龙湿地"
+      },
+      {
+        "id": "yichun",
+        "name": "伊春",
+        "countryCode": "CN",
+        "geo": {
+          "lat": 47.727,
+          "lng": 128.841
+        },
+        "query": "伊春五营国家森林公园"
+      },
+      {
+        "id": "harbin",
+        "name": "哈尔滨",
+        "countryCode": "CN",
+        "geo": {
+          "lat": 45.803,
+          "lng": 126.535
+        },
+        "query": "哈尔滨中央大街"
+      },
+      {
+        "id": "hengdaohezi",
+        "name": "横道河子",
+        "countryCode": "CN",
+        "geo": {
+          "lat": 44.764,
+          "lng": 129.049
+        },
+        "query": "横道河子东北虎林园"
+      }
+    ],
+    "routes": [
+      {
+        "day": 2,
+        "placeIds": [
+          "benxi",
+          "qiqihar"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "qiqihar",
+          "yichun"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "yichun",
+          "harbin"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "harbin",
+          "hengdaohezi",
+          "harbin"
+        ]
+      }
+    ],
+    "dailyRoutes": []
+  },
+  "routeMap": {
+    "defaultRegionId": "northeast",
+    "regions": [
+      {
+        "id": "northeast",
+        "label": "东北秋游",
+        "countryCode": "CN",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "coastal-region",
+        "mapModeReason": "north-south-route",
+        "mapModeMetrics": {
+          "placeCount": 5,
+          "geoPlaceCount": 5,
+          "widthKm": 399.99,
+          "heightKm": 714.06,
+          "spanKm": 806.86,
+          "averageNearestKm": 306.94,
+          "components": 1,
+          "largestLegKm": 674.04,
+          "jumpRatio": 2.44
+        },
+        "days": [
+          2,
+          4,
+          6,
+          7
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-03-coastal.webp",
+        "title": "东北秋游路线",
+        "ariaLabel": "东北秋游模板化旅行路线示意图，共4天",
+        "description": "本溪 → 齐齐哈尔 → 伊春 → 哈尔滨 行程示意图",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "东北秋游 · NORTHEAST CHINA",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "benxi",
+              "qiqihar"
+            ],
+            "paths": [
+              "M821.49 815.35 C846.9 623.8 842.4 433.0 808.16 254.19"
+            ],
+            "overviewPaths": [
+              "M821.49 815.35 C846.9 623.8 842.4 433.0 808.16 254.19"
+            ]
+          },
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "qiqihar",
+              "yichun"
+            ],
+            "paths": [
+              "M808.16 254.19 C920.2 272.3 1029.1 260.5 1128.32 219.65"
+            ],
+            "overviewPaths": [
+              "M808.16 254.19 C920.2 272.3 1029.1 260.5 1128.32 219.65"
+            ]
+          },
+          {
+            "day": 6,
+            "color": "#df6185",
+            "placeIds": [
+              "yichun",
+              "harbin"
+            ],
+            "paths": [
+              "M1128.32 219.65 C1059.5 265.2 1008.5 325.8 978.35 397.81"
+            ],
+            "overviewPaths": [
+              "M1128.32 219.65 C1059.5 265.2 1008.5 325.8 978.35 397.81"
+            ]
+          },
+          {
+            "day": 7,
+            "color": "#397dc1",
+            "placeIds": [
+              "harbin",
+              "hengdaohezi",
+              "harbin"
+            ],
+            "paths": [
+              "M978.35 397.81 C1043.6 414.2 1099.1 446.9 1141.84 494.03 C1095.9 445.0 1040.3 412.3 978.35 397.81"
+            ],
+            "overviewPaths": [
+              "M978.35 397.81 C1043.6 414.2 1099.1 446.9 1141.84 494.03 C1095.9 445.0 1040.3 412.3 978.35 397.81"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "benxi",
+            "x": 821.49,
+            "y": 815.35,
+            "color": "#e77e22",
+            "tx": 853.49,
+            "ty": 783.35,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "本溪"
+            ],
+            "query": "本溪关门山国家森林公园",
+            "geo": {
+              "lat": 41.294,
+              "lng": 124.123
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "qiqihar",
+            "x": 808.16,
+            "y": 254.19,
+            "color": "#e77e22",
+            "tx": 776.16,
+            "ty": 222.19,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "齐齐哈尔"
+            ],
+            "query": "齐齐哈尔扎龙湿地",
+            "geo": {
+              "lat": 47.354,
+              "lng": 123.918
+            },
+            "days": [
+              2,
+              4
+            ]
+          },
+          {
+            "id": "yichun",
+            "x": 1128.32,
+            "y": 219.65,
+            "color": "#209aaa",
+            "tx": 1206.32,
+            "ty": 157.65,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "伊春"
+            ],
+            "query": "伊春五营国家森林公园",
+            "geo": {
+              "lat": 47.727,
+              "lng": 128.841
+            },
+            "days": [
+              4,
+              6
+            ]
+          },
+          {
+            "id": "harbin",
+            "x": 978.35,
+            "y": 397.81,
+            "color": "#df6185",
+            "tx": 900.35,
+            "ty": 335.81,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "哈尔滨"
+            ],
+            "query": "哈尔滨中央大街",
+            "geo": {
+              "lat": 45.803,
+              "lng": 126.535
+            },
+            "days": [
+              6,
+              7
+            ]
+          },
+          {
+            "id": "hengdaohezi",
+            "x": 1141.84,
+            "y": 494.03,
+            "color": "#397dc1",
+            "tx": 1003.84,
+            "ty": 596.03,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "横道河子"
+            ],
+            "query": "横道河子东北虎林园",
+            "geo": {
+              "lat": 44.764,
+              "lng": 129.049
+            },
+            "days": [
+              7
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "benxi",
+          "qiqihar",
+          "yichun",
+          "harbin",
+          "hengdaohezi"
+        ],
+        "dailyLayouts": {
+          "2": {
+            "places": [
+              "benxi",
+              "qiqihar"
+            ],
+            "labels": {
+              "benxi": {
+                "x": 853.49,
+                "y": 783.35,
+                "anchor": "start"
+              },
+              "qiqihar": {
+                "x": 776.16,
+                "y": 222.19,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 814.83,
+                "y": 534.77
+              }
+            ]
+          },
+          "4": {
+            "places": [
+              "qiqihar",
+              "yichun"
+            ],
+            "labels": {
+              "qiqihar": {
+                "x": 776.16,
+                "y": 222.19,
+                "anchor": "end"
+              },
+              "yichun": {
+                "x": 1206.32,
+                "y": 157.65,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 968.24,
+                "y": 236.92
+              }
+            ]
+          },
+          "6": {
+            "places": [
+              "yichun",
+              "harbin"
+            ],
+            "labels": {
+              "yichun": {
+                "x": 1206.32,
+                "y": 157.65,
+                "anchor": "start"
+              },
+              "harbin": {
+                "x": 900.35,
+                "y": 335.81,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1053.34,
+                "y": 308.73
+              }
+            ]
+          },
+          "7": {
+            "places": [
+              "harbin",
+              "hengdaohezi"
+            ],
+            "labels": {
+              "harbin": {
+                "x": 900.35,
+                "y": 335.81,
+                "anchor": "end"
+              },
+              "hengdaohezi": {
+                "x": 1003.84,
+                "y": 596.03,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1060.1,
+                "y": 445.92
+              },
+              {
+                "items": [],
+                "x": 1060.1,
+                "y": 445.92
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
